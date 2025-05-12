@@ -1,0 +1,68 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank_you
+  - ask_food_info
+  - inform_food_name
+  - ask_all_foods
+  - ask_food_price
+  - ask_food_location
+
+entities:
+  - food_name
+
+# Phiên bản rasa >= 3x thì mỗi slot phải có mapping để biết đang nhận giá trị từ entity nào
+slots:
+  food_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: food_name
+
+  shown_foods_indices:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Xin chào! Mình là Yummy's Chatbot, người bạn đồng hành ẩm thực của bạn tại Đà Nẵng. Bạn muốn khám phá hương vị nào hôm nay?"
+    - text: "Chào bạn! Rất vui được gặp bạn. Yummy's Chatbot sẽ giúp bạn tìm kiếm những món ngon và địa điểm ẩm thực hấp dẫn ở Đà Nẵng!"
+    - text: "Xin chào! Mình là trợ lý ảo Yummy, chuyên về ẩm thực Đà Nẵng. Bạn đang thèm món gì nào?"
+    - text: "Chào mừng bạn đến với Đà Nẵng! Yummy's Chatbot sẽ dẫn bạn đến thiên đường ẩm thực của thành phố này. Bạn muốn biết thông tin gì?"
+    - text: "Xin chào! Đà Nẵng có vô vàn món ngon đang chờ bạn. Yummy's Chatbot có thể giúp gì cho bạn hôm nay?"
+    - text: "Chào bạn! Chào mừng đến với Đà Nẵng - thành phố không chỉ đẹp mà còn ngon! Yummy's Chatbot sẽ giúp bạn khám phá ẩm thực nơi đây."
+    - text: "Chào mừng bạn đã ghé thăm! Mình là Yummy's Chatbot, chuyên gia ẩm thực Đà Nẵng. Bạn có câu hỏi nào về ăn uống không?"
+    - text: "Xin chào! Thành phố biển Đà Nẵng không chỉ có cảnh đẹp mà còn có ẩm thực tuyệt vời! Yummy's Chatbot sẵn sàng gợi ý những món ngon cho bạn."
+
+  utter_goodbye:
+    - text: "Chúc bạn có những bữa ăn thật ngon miệng tại Đà Nẵng! Tạm biệt và hẹn gặp lại!"
+    - text: "Hy vọng Yummy's Chatbot đã giúp bạn tìm được những món ăn ưng ý. Chúc bạn một chuyến đi ngon miệng và vui vẻ!"
+    - text: "Rất vui được đồng hành cùng bạn trên hành trình ẩm thực Đà Nẵng. Tạm biệt!"
+    - text: "Tạm biệt và hẹn gặp lại bạn trong những khám phá ẩm thực tiếp theo ở Đà Nẵng nhé!"
+    - text: "Cảm ơn bạn đã trò chuyện với Yummy's Chatbot. Nếu cần thêm gợi ý món ngon, đừng ngần ngại quay lại nha!"
+    - text: "Cảm ơn bạn đã tin tưởng Yummy's Chatbot. Chúc bạn khám phá Đà Nẵng không chỉ bằng mắt mà còn bằng cả vị giác!"
+    - text: "Tạm biệt và chúc bạn luôn tìm được những món ăn ngon ở thành phố biển xinh đẹp này!"
+    - text: "Nếu bạn cần thêm bất kỳ gợi ý ẩm thực nào ở Đà Nẵng, Yummy's Chatbot luôn sẵn sàng. Chúc bạn ngon miệng!"
+
+  utter_you_are_welcome:
+    - text: "Không có gì cả! Yummy luôn sẵn lòng giúp bạn tìm kiếm những món ngon!"
+    - text: "Không có chi bạn ơi! Yummy còn gợi ý được món gì nữa không?"
+    - text: "Dạ vâng, không có gì cả. Bạn muốn Yummy gợi ý thêm quán ăn nào không?"
+    - text: "Không có chi đâu bạn. Chúc bạn luôn tìm được những món ăn hợp khẩu vị!"
+    - text: "Vâng, rất vui được giúp đỡ bạn trên hành trình ẩm thực. Đừng ngại hỏi Yummy nếu bạn cần thêm thông tin nha!"
+  
+
+actions:
+  - action_provide_food_info
+  - action_list_many_foods
+  - action_provide_food_price
+  - action_provide_food_location
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

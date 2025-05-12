@@ -1,0 +1,27 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: Test greeting
+  steps: 
+    - user: Xin chào
+    - action: utter_greet
+- story: Test goodbye
+  steps:
+    - user: Bái bai
+    - action: utter_goodbye
+- story: Test ask location
+  steps:
+    - user: Bà Nà Hills có gì chơi?
+    - action: utter_ask_location2
+- story: Test ask food
+  steps:
+    - user: Mì Quảng ăn ở đâu là ngon nhất?
+    - action: utter_ask_food
+- story: Test out of scope
+  steps: 
+    - user: Thời tiết Hà Nội thế nào?
+    - action: utter_out_of_scope
+
+
+
