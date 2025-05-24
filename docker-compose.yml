@@ -1,0 +1,41 @@
+version: '3'
+services:
+  rasa:
+    image: rasa/rasa:3.6.0
+    user: "0:0"
+    volumes:
+      - ./:/app
+    ports:
+      - "5005:5005"
+    command: run --enable-api --cors "*" --port 5005
+    working_dir: /app
+    depends_on:
+      - rasa-actions
+    networks:
+      - rasa-network
+  rasa-actions:
+    image: rasa/rasa:3.6.0
+    user: "0:0"
+    volumes:
+      - ./:/app
+    ports:
+      - "5055:5055"
+    command: run actions --port 5055
+    working_dir: /app
+    networks:
+      - rasa-network
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs
+    depends_on:
+      - rasa
+    networks:
+      - rasa-network
+networks:
+  rasa-network:
+    driver: bridge
