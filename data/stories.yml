@@ -17,12 +17,7 @@ stories:
 
 - story: Hỏi thông tin về món ăn cụ thể
   steps:
-  - intent: ask_food_info
-  - action: action_provide_food_info
-
-- story: Cung cấp tên món ăn trực tiếp
-  steps:
-  - intent: inform_food_name
+  - intent: ask_food_details
   - action: action_provide_food_info
 
 - story: Hỏi nhiều món ăn ngon ở Đà Nẵng
@@ -34,7 +29,7 @@ stories:
   steps:
   - intent: ask_all_foods
   - action: action_list_many_foods
-  - intent: inform_food_name
+  - intent: ask_food_details
   - action: action_provide_food_info
 
 
@@ -62,4 +57,9 @@ stories:
   - intent: ask_food_location
   - action: action_provide_food_location
 
+
+- story: Các câu hỏi thường gặp về các món ăn Đà Nẵng
+  steps:
+  - intent: faq_food_question
+  - action: action_answer_food_faq
 
