@@ -8,7 +8,7 @@
             "Bánh canh ruộng: 20 Hà Thị Thân"
         ],
         "food_category": "Món ăn no",
-        "average_price": 20
+        "average_price": 20000
     },
     {
         "name": "Mì Quảng - Món Ăn Đà Nẵng Nổi Tiếng Bốn Phương",
@@ -20,7 +20,7 @@
             "Mì Quảng Bà Vị: 166 Lê Đình Dương, quận Hải Châu, TP.Đà Nẵng"
         ],
         "food_category": "Món ăn no",
-        "average_price": 25
+        "average_price": 25000
     },
     {
         "name": "Bánh Tráng Cuốn Thịt Heo - Đậm Đà Hương Vị Đà Nẵng",
@@ -31,7 +31,7 @@
             "Quán Mậu: 35 Đỗ Thức Tịnh, quận Cẩm Lệ, TP. Đà Nẵng"
         ],
         "food_category": "Món ăn no",
-        "average_price": 25
+        "average_price": 25000
     },
     {
         "name": "Bánh Tráng Kẹp - Món Ăn Vặt Nổi tiếng Đà Nẵng",
@@ -42,7 +42,7 @@
             "Bánh tráng kẹp Dì Hoa: 62/2A Núi Thành, quận Hải Châu, TP. Đà Nẵng"
         ],
         "food_category": "Món ăn vặt",
-        "average_price": 15
+        "average_price": 15000
     },
     {
         "name": "Bánh Bèo - Món Ăn Xế Thơm Ngon Ở Đà Nẵng",
@@ -53,7 +53,7 @@
             "Bánh bèo nóng: 197 Núi Thành"
         ],
         "food_category": "Món ăn no",
-        "average_price": 20
+        "average_price": 20000
     },
     {
         "name": "Bánh Nậm Đà Nẵng - Món Ăn Sáng Thơm Ngon Ở Đà Nẵng",
@@ -64,7 +64,7 @@
             "Quán Bi: 74 Trưng Nữ Vương"
         ],
         "food_category": "Món ăn no",
-        "average_price": 20
+        "average_price": 20000
     },
     {
         "name": "Bánh Bột Lọc Đà Nẵng",
@@ -75,7 +75,7 @@
             "Bánh lọc Thủy: 12 Thạch Lam"
         ],
         "food_category": "Món ăn no",
-        "average_price": 20
+        "average_price": 20000
     },
     {
         "name": "Bánh Căn Đà Nẵng - Món Ăn Sáng Ngon Ở Đà Nẵng",
@@ -86,7 +86,7 @@
             "Bánh căn Loan: 274 Hải Phòng, quận Thanh Khê, TP. Đà Nẵng"
         ],
         "food_category": "Món ăn no",
-        "average_price": 20
+        "average_price": 20000
     },
     {
         "name": "Bánh Đập Đà Nẵng",
@@ -97,7 +97,7 @@
             "Bánh đập cô Liên: 8/26 đường Nguyễn Duy Hiệu, Sơn Trà"
         ],
         "food_category": "Món ăn no",
-        "average_price": 20
+        "average_price": 20000
     },
     {
         "name": "Bê Thui Cầu Mống Đà Nẵng",

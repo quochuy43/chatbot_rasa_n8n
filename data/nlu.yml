@@ -64,7 +64,7 @@ nlu:
     - cảm ơn bạn iu nhá
   
 # food
-- intent: inform_food_name
+- intent: ask_food_details
   examples: |
     - [mì quảng](food_name) ý bạn
     - [bún chả cá](food_name) í
@@ -78,26 +78,12 @@ nlu:
     - [bánh đập](food_name) nha bạn
     - [bánh bột lọc](food_name)
     - [cao lầu đà nẵng](food_name)
-
-- intent: ask_food_info
-  examples: |
     - Cho mình hỏi về [bánh xèo](food_name) ở Đà Nẵng chỗ nào ngon?
     - Nghe nói [gỏi cá trích](food_name) là đặc sản, bạn có thông tin gì không?
     - [Mì quảng ếch](food_name) giá khoảng bao nhiêu một tô?
     - Ở Đà Nẵng có món [nem lụi](food_name) không nhỉ?
     - Bạn biết quán [bánh tráng cuốn thịt heo](food_name) nào nổi tiếng không?
     - [Chả bò](food_name) Đà Nẵng mua ở đâu thì chuẩn?
-    - [Ốc hút](food_name) ăn ở đâu ngon và rẻ?
-    - [Bánh căn](food_name) Đà Nẵng khác gì bánh căn ở chỗ khác?
-    - Mình muốn thử [mít trộn](food_name), bạn có gợi ý quán nào không?
-    - Cho mình xin địa chỉ quán [bún mắm nêm](food_name) ngon.
-    - [Bánh nậm](food_name) và [bánh lọc](food_name) ở Đà Nẵng có gì đặc biệt?
-    - Mình muốn ăn hải sản tươi sống, bạn gợi ý món [Bún hải sản](food_name) ở đâu ngon?
-    - [Sinh tố bơ](food_name) ở Đà Nẵng có ngon không bạn?
-    - Bạn có biết quán [bún đậu mắm tôm](food_name) nào ngon không?
-    - Thông tin chi tiết về món [tré trộn](food_name) Đà Nẵng.
-    - Giá một suất [bánh bèo](food_name) ở Đà Nẵng khoảng bao nhiêu?
-    - Mình muốn ăn chay, ở Đà Nẵng có món [bún chay](food_name) nào ngon không?
     - bạn biết gì về [mì quảng](food_name) không?
     - [mì quảng](food_name) có ngon không bạn?
     - mình muốn biết về món [mì quảng](food_name)
@@ -178,3 +164,112 @@ nlu:
     - [Bún chả cá](food_name) có địa chỉ nào ngon?
     - [Nem tré](food_name) vỉa hè nào bán?
     - [bún đậu mắm tôm](food_name) ở đâu ngon
+
+- intent: faq_food_question
+  examples: |
+    - Bánh Canh Ruộng Đà Nẵng có gì đặc biệt?
+    - Mì Quảng Đà Nẵng có bao nhiêu loại topping khác nhau?
+    - Địa chỉ nào nổi tiếng với món Bánh Tráng Cuốn Thịt Heo ở Đà Nẵng?
+    - Món Bánh Tráng Kẹp được làm từ nguyên liệu gì?
+    - Bánh Bèo Đà Nẵng thường được ăn với topping gì?
+    - Điều gì làm nên hương vị đặc trưng của Bánh Nậm Đà Nẵng?
+    - Món Bánh Bột Lọc Đà Nẵng có đặc điểm gì nổi bật?
+    - Bánh Căn Đà Nẵng được làm từ nguyên liệu nào?
+    - Bánh Đập Đà Nẵng được làm từ các thành phần gì?
+    - Bê Thui Cầu Mống có đặc điểm gì làm nó nổi bật?
+    - Gỏi Cá Nam Ô Đà Nẵng có điểm gì đặc biệt so với các loại gỏi khác?
+    - Mít Trộn Đà Nẵng được làm từ những nguyên liệu gì?
+    - Bún Bò Đà Nẵng có điểm gì khác biệt so với Bún Bò Huế?
+    - Bún Mắm Nêm có hương vị như thế nào?
+    - Bún Thịt Nướng Đà Nẵng được chế biến như thế nào?
+    - Chả Cá Đà Nẵng được làm từ loại cá nào?
+    - Bún Hải Sản Đà Nẵng có những topping nào?
+    - Bánh Xèo Đà Nẵng có đặc điểm gì khiến nó hấp dẫn?
+    - Cơm Hến Đà Nẵng có những nguyên liệu gì trong món ăn này?
+    - Ốc và Hải Sản Đà Nẵng có các món gì nổi bật?
+    - Cơm Gà Đà Nẵng có gì khác biệt so với cơm gà ở các vùng khác?
+    - Cao Lầu Đà Nẵng có đặc điểm gì khiến nó khác biệt với các món mì khác?
+    - Nem Tré Đà Nẵng có thành phần nào đặc biệt không thể thiếu?
+    - Phá Lấu Đà Nẵng có hương vị như thế nào?
+    - Ốc Trộn Đà Nẵng có thể ăn kèm với nước mắm nào để tăng thêm hương vị?
+    - Cháo Quẩy Sườn Sụn Đà Nẵng có thể ăn kèm với gia vị nào để thêm phần thơm ngon?
+    - Tào Phớ Đà Nẵng có thể ăn kèm với topping nào để thú vị hơn?
+    - Chè Xoa Xoa Hạt Lựu Đà Nẵng có thể ăn kèm với topping nào đặc biệt?
+    - Chè Sầu Riêng có thể ăn với topping gì để tăng thêm độ ngọt?
+    - Ram Cuốn Lá Cải Đà Nẵng có thể ăn kèm với gia vị nào để tăng thêm hương vị?
+    - Đùi Cừu Nướng Đà Nẵng có thể kết hợp với loại rượu nào để thưởng thức tốt hơn?
+    - Bánh Mì Bà Lan có thể ăn kèm với món gì để tạo độ ngon miệng hơn?
+    - Kem Bơ Đà Nẵng có thể ăn với topping nào để tăng thêm hương vị?
+    - Ốc Hút Đà Nẵng có thể ăn với gia vị nào để tăng thêm sự hấp dẫn?
+    - Mực Rim Me Đà Nẵng có thể ăn với gia vị nào để tạo sự đặc biệt?
+    - Chả Bò Đà Nẵng có thể ăn kèm với món gì để làm phong phú thêm hương vị?
+    - Mực Một Nắng Đà Nẵng có thể chế biến theo cách nào khác ngoài nướng?
+    - Bún Chay Đà Nẵng có thể ăn kèm với món gì để tăng thêm sự đa dạng?
+    - Bún Đậu Mắm Tôm có thể ăn kèm với gì để món ăn trở nên đậm đà hơn?
+    - Bánh Canh Ruộng có thể thưởng thức với topping gì cho phù hợp?
+    - Mì Quảng có thể ăn kèm với loại nước dùng nào để thêm phần đậm đà?
+    - Bánh Tráng Cuốn Thịt Heo có thể ăn với nước chấm nào đặc biệt?
+    - Bánh Tráng Kẹp có thể ăn kèm với topping nào để thêm phần hấp dẫn?
+    - Bánh Bèo có thể ăn kèm với gia vị nào để món ăn hoàn hảo hơn?
+    - Bánh Nậm có thể thưởng thức với nước chấm nào để tăng hương vị?
+    - Bánh Bột Lọc có thể ăn với gia vị nào để thêm phần thú vị?
+    - Bánh Căn Đà Nẵng có thể ăn với topping nào để tạo sự độc đáo?
+    - Bánh Đập Đà Nẵng có thể ăn kèm với gia vị gì để tăng độ đậm đà?
+    - Bê Thui Cầu Mống có thể ăn với nước chấm nào đặc biệt?
+    - Gỏi Cá Nam Ô có thể kết hợp với rau gì để thêm phần tươi mát?
+    - Mít Trộn có thể ăn kèm với gia vị nào để thêm phần hấp dẫn?
+    - Bún Bò Đà Nẵng có thể ăn với gia vị nào để tăng độ cay nồng?
+    - Bún Mắm Nêm có thể kết hợp với gia vị nào để tăng thêm sự đặc biệt?
+    - Bún Thịt Nướng có thể ăn với gia vị nào để món ăn ngon hơn?
+    - Chả Cá Đà Nẵng có thể kết hợp với gia vị nào để tăng thêm độ ngon?
+    - Bún Hải Sản Đà Nẵng có thể ăn với loại nước mắm nào để tăng thêm hương vị?
+    - Bánh Xèo Đà Nẵng có thể kết hợp với gia vị gì để trở nên thơm ngon?
+    - Cơm Hến Đà Nẵng có thể ăn với gia vị nào để tăng thêm độ đậm đà?
+    - Ốc và Hải Sản Đà Nẵng có thể kết hợp với gia vị nào để thêm phần hấp dẫn?
+    - Cơm Gà Đà Nẵng có thể ăn kèm với gia vị nào để món ăn thêm phần hấp dẫn?
+    - Cao Lầu Đà Nẵng có thể kết hợp với topping nào để thêm phần thơm ngon?
+    - Nem Tré Đà Nẵng có thể ăn kèm với gia vị nào để tăng thêm hương vị?
+    - Phá Lấu Đà Nẵng có thể ăn với gia vị nào để tạo sự đặc biệt?
+    - Mì Quảng Đà Nẵng có thể ăn kèm với nước gì để tăng thêm hương vị?
+    - Bánh canh ruộng Đà Nẵng có thể ăn kèm với topping gì?
+    - Món bánh bèo Đà Nẵng có gì đặc biệt?
+    - Mít trộn Đà Nẵng có thể ăn với món gì?
+    - Chả cá Đà Nẵng có thể ăn kèm với gia vị nào?
+    - Bánh đập Đà Nẵng có thể kết hợp với món gì?
+    - Món cơm hến Đà Nẵng có gì đặc biệt?
+    - Bún thịt nướng Đà Nẵng có đặc điểm gì?
+    - Mực rim me Đà Nẵng có thể ăn với món gì?
+    - Bánh xèo Đà Nẵng có thể ăn kèm với gì?
+    - Cao lầu Đà Nẵng có hương vị đặc trưng như thế nào?
+    - Chè sầu riêng Đà Nẵng có thể ăn với topping nào?
+    - Bánh nậm Đà Nẵng có thể ăn với gia vị gì?
+    - Bánh bột lọc Đà Nẵng có thể ăn kèm với gia vị nào?
+    - Phá lấu Đà Nẵng có thể kết hợp với gì?
+    - Bánh tráng cuốn Đà Nẵng có thể ăn với gia vị nào?
+    - Bún mắm nêm Đà Nẵng có thể ăn với gì?
+    - Cơm gà Đà Nẵng có thể ăn với nước mắm nào?
+    - Mực một nắng Đà Nẵng có thể ăn kèm với gì?
+    - Món bánh căn Đà Nẵng có thể ăn kèm với gia vị nào?
+    - Bánh căn Đà Nẵng có thể ăn với topping gì?
+    - Bún hải sản Đà Nẵng có thể ăn với gì?
+    - Cơm hến Đà Nẵng có thể ăn với gia vị nào?
+    - Bánh xèo Đà Nẵng có thể ăn kèm với nước mắm nào?
+    - Món cháo quẩy sườn sụn Đà Nẵng có thể ăn với gì?
+    - Chè xoa xoa hạt lựu Đà Nẵng có thể ăn với gia vị gì?
+    - Chè thập cẩm Đà Nẵng có thể kết hợp với món gì?
+    - Cơm gà xối mỡ Đà Nẵng có thể ăn kèm với gia vị nào?
+    - Mì Quảng có thể ăn với topping gì?
+    - Bánh bèo Đà Nẵng có thể ăn kèm với gì?
+    - Bánh bột lọc Đà Nẵng có thể ăn kèm với gia vị nào?
+    - Chè đậu xanh Đà Nẵng có thể ăn với topping gì?
+    - Bánh đập Đà Nẵng có thể ăn kèm với gì?
+    - Bánh mì thịt nướng Đà Nẵng có thể ăn kèm với gia vị nào?
+    - Bánh tráng cuốn Đà Nẵng có thể ăn kèm với gia vị gì?
+    - Mực xào Đà Nẵng có thể ăn với món gì?
+    - Gỏi cuốn Đà Nẵng có thể ăn kèm với gia vị gì?
+    - Bánh bèo Đà Nẵng có thể ăn với gì?
+    - Bánh canh Đà Nẵng có thể ăn với gia vị nào?
+    - Chè ba màu Đà Nẵng có thể ăn với topping nào?
+    - Bánh mì chả cá Đà Nẵng có thể ăn với gì?
+    - Mì Quảng Đà Nẵng có thể ăn với gia vị nào?
+

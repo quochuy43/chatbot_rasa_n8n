@@ -18,5 +18,11 @@ rules:
 
 - rule: Provide food info for direct food name mention
   steps:
-  - intent: inform_food_name
+  - intent: ask_food_details
   - action: action_provide_food_info
+
+
+- rule: FAQ food
+  steps:
+    - intent: faq_food_question
+    - action: action_answer_food_faq

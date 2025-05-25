@@ -2,6 +2,8 @@ from typing import Any, Text, Dict, List
 import json, re
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import pandas as pd
+import difflib
 
 from rasa_sdk.events import SlotSet
 
@@ -37,7 +39,6 @@ class ActionProvideFoodInfo(Action):
         dispatcher.utter_message(
             text=f"Xin lỗi, mình chưa có thông tin về món {food_name}. Mình sẽ gắng cập nhật thông tin để giải đáp thắc mắc cho bạn nhé!")
         return []
-
 
 class ActionListManyFoods(Action):
     def name(self) -> Text:
@@ -134,4 +135,31 @@ class ActionProvideFoodLocation(Action):
 
         dispatcher.utter_message(
             text=f"Xin lỗi, mình chưa biết địa điểm bán món {food_name} rồi :(")
+        return []
+    
+# FAQ Food
+class ActionAnswerFoodFAQ(Action):
+
+    def name(self) -> Text:
+        return "action_answer_food_faq" 
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        user_question = tracker.latest_message.get("text", "").lower()
+
+        # Doc file excel
+        df = pd.read_excel("actions/data/100_questions_answers_grabfood.xlsx")
+        questions = df["Question"].astype(str).tolist()
+        answers = df["Answer"].astype(str).tolist()
+
+        # So khop voi cau hoi gan nhat
+        closest = difflib.get_close_matches(user_question, questions, n=1, cutoff=0.5)
+        if closest: 
+            idx = questions.index(closest[0])
+            dispatcher.utter_message(text=answers[idx])
+        else:
+            dispatcher.utter_message(text="Xin lỗi, mình chưa rõ câu hỏi đó. Bạn có thể hỏi lại rõ hơn được không?")
+
         return []

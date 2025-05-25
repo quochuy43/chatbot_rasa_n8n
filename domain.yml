@@ -4,11 +4,11 @@ intents:
   - greet
   - goodbye
   - thank_you
-  - ask_food_info
-  - inform_food_name
+  - ask_food_details
   - ask_all_foods
   - ask_food_price
   - ask_food_location
+  - faq_food_question
 
 entities:
   - food_name
@@ -62,6 +62,7 @@ actions:
   - action_list_many_foods
   - action_provide_food_price
   - action_provide_food_location
+  - action_answer_food_faq
 
 session_config:
   session_expiration_time: 60
