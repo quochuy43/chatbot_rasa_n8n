@@ -26,7 +26,7 @@ class ActionProvideFoodInfo(Action):
             return []
 
         # Load data tu JSON
-        with open("actions/data/foods.json", "r", encoding="utf-8") as f:
+        with open("actions/data/specialty_foods.json", "r", encoding="utf-8") as f:
             foods = json.load(f)
 
         for food in foods:
@@ -50,7 +50,7 @@ class ActionListManyFoods(Action):
 
         shown_foods_indices = tracker.get_slot("shown_foods_indices")
 
-        with open("actions/data/foods.json", "r", encoding="utf-8") as f:
+        with open("actions/data/specialty_foods.json", "r", encoding="utf-8") as f:
             foods = json.load(f)
 
         if not shown_foods_indices:
@@ -81,7 +81,6 @@ class ActionListManyFoods(Action):
         # Lưu lại danh sách các món đã hiển thị
         return [SlotSet("shown_foods_indices", shown_foods_indices)]
 
-
 class ActionProvideFoodPrice(Action):
     def name(self) -> Text:
         return "action_provide_food_price"
@@ -95,7 +94,7 @@ class ActionProvideFoodPrice(Action):
             dispatcher.utter_message(text="Bạn muốn hỏi giá món gì vậy?")
             return []
 
-        with open("actions/data/foods.json", "r", encoding="utf-8") as f:
+        with open("actions/data/specialty_foods.json", "r", encoding="utf-8") as f:
             foods = json.load(f)
 
         for food in foods:
@@ -107,7 +106,6 @@ class ActionProvideFoodPrice(Action):
         dispatcher.utter_message(
             text=f"Xin lỗi, mình chưa có thông tin giá của món {food_name}.")
         return []
-
 
 class ActionProvideFoodLocation(Action):
 
@@ -124,7 +122,7 @@ class ActionProvideFoodLocation(Action):
                 text="Bạn muốn tìm địa điểm của món nào vậy?")
             return []
 
-        with open("actions/data/foods.json", "r", encoding="utf-8") as f:
+        with open("actions/data/specialty_foods.json", "r", encoding="utf-8") as f:
             foods = json.load(f)
 
         for food in foods:
@@ -137,6 +135,50 @@ class ActionProvideFoodLocation(Action):
             text=f"Xin lỗi, mình chưa biết địa điểm bán món {food_name} rồi :(")
         return []
     
+
+# Coffee and Milk tea
+class ActionListManyCoffee(Action):
+    def name(self) -> Text:
+        return "action_list_many_coffees"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        shown_coffees_indices = tracker.get_slot("shown_coffees_indices")
+
+        with open("actions/data/danang_coffee_milktea_selenium.json", "r", encoding="utf-8") as f:
+            coffees = json.load(f)
+
+        if not shown_coffees_indices:
+            shown_coffees_indices = []
+
+        coffees_per_page = 7
+
+        if len(shown_coffees_indices) >= len(coffees):
+            dispatcher.utter_message(
+                text="Mình đã giới thiệu hết các quán cà phê/ trà sữa nổi tiếng của Đà Nẵng rồi. Bạn muốn biết thêm thông tin gì khác không?")
+            return [SlotSet("shown_coffees_indices", [])]  # Reset lại slot
+
+        remaining_indices = [i for i in range(
+            len(coffees)) if i not in shown_coffees_indices]
+        num_to_show = min(coffees_per_page, len(remaining_indices))
+        indices_to_show = remaining_indices[:num_to_show]
+
+        # Update danh sách các quán đã hiển thị
+        shown_coffees_indices.extend(indices_to_show)
+
+        response = "\n"
+        response = "Đây là các quán cà phê mà bạn nên thử ghé qua một lần nhaaaaa: \n"
+        for idx in indices_to_show:
+            response += f"{coffees[idx]['name']}; "
+
+        dispatcher.utter_message(text=response)
+
+        # Lưu lại danh sách các món đã hiển thị
+        return [SlotSet("shown_coffees_indices", shown_coffees_indices)]
+
+
 # FAQ Food
 class ActionAnswerFoodFAQ(Action):
 

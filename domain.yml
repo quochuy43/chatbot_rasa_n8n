@@ -9,9 +9,11 @@ intents:
   - ask_food_price
   - ask_food_location
   - faq_food_question
+  - ask_all_coffee_tea_shops
 
 entities:
   - food_name
+  - coffee_name
 
 # Phiên bản rasa >= 3x thì mỗi slot phải có mapping để biết đang nhận giá trị từ entity nào
 slots:
@@ -23,6 +25,19 @@ slots:
         entity: food_name
 
   shown_foods_indices:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  coffee_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: coffee_name
+
+  shown_coffees_indices:
     type: list
     influence_conversation: false
     mappings:
@@ -63,6 +78,7 @@ actions:
   - action_provide_food_price
   - action_provide_food_location
   - action_answer_food_faq
+  - action_list_many_coffees
 
 session_config:
   session_expiration_time: 60
