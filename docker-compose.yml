@@ -14,14 +14,16 @@ services:
     networks:
       - rasa-network
   rasa-actions:
-    image: rasa/rasa:3.6.0
-    user: "0:0"
+    build:
+      context: .
+      dockerfile: action_server_docker/Dockerfile
+    container_name: rasa-project-rasa-actions
     volumes:
-      - ./:/app
+      - ./actions:/app/actions
+      - ./requirements-actions.txt:/app/requirements-actions.txt
+    user: "0:0"
     ports:
       - "5055:5055"
-    command: run actions --port 5055
-    working_dir: /app
     networks:
       - rasa-network
   nginx:

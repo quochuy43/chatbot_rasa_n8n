@@ -63,3 +63,10 @@ stories:
   - intent: faq_food_question
   - action: action_answer_food_faq
 
+
+# Cà phê
+- story: Hỏi nhiều quán cà phê nổi tiếng
+  steps:
+  - intent: ask_all_coffee_tea_shops
+  - action: action_list_many_coffees
+

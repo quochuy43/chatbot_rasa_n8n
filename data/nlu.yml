@@ -102,8 +102,7 @@ nlu:
     - liệt kê các món ăn đặc trưng của đà nẵng
     - đà nẵng có nhiều món ngon không ạ? 
     - đồ ăn ở đà nẵng có nhiều món hấp dẫn không bạn
-    - còn nhiều món nào khác không bạn
-    - ê kể thêm cho mình biết đi
+    - còn nhiều món ăn nào khác không bạn
     - bạn nói thêm cho mình nhiều món khác đi
     - còn món nào nữa không
     - kể thêm vài món nữa đi
@@ -273,3 +272,17 @@ nlu:
     - Bánh mì chả cá Đà Nẵng có thể ăn với gì?
     - Mì Quảng Đà Nẵng có thể ăn với gia vị nào?
 
+- intent: ask_all_coffee_tea_shops
+  examples: |
+    - Đà Nẵng có những quán cà phê/ trà sữa nào ngon?
+    - Có quán cà phê nào ngon không?
+    - Bạn giới thiệu cho mình các quán cà phê ở Đà Nẵng đi.
+    - Mình muốn tìm quán trà sữa ở Đà Nẵng.
+    - Quán cà phê nào nổi tiếng ở Đà Nẵng vậy bạn?
+    - Đi Đà Nẵng nên uống cà phê ở đâu nhỉ?
+    - Liệt kê giúp mình các quán cà phê/ trà sữa đặc trưng của Đà Nẵng.
+    - Đồ uống ở Đà Nẵng có nhiều quán hấp dẫn không bạn?
+    - Còn nhiều quán cà phê nào khác không bạn?
+    - Bạn nói thêm cho mình nhiều quán khác đi.
+    - Còn quán nào nữa không?
+    - Kể thêm vài quán nữa đi.

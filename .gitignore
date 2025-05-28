@@ -1,1 +1,10 @@
-/.rasa_env
+# Thư mục môi trường ảo
+/.rasa_env/
+
+# File cache và mô hình tạm sinh ra
+/.rasa/cache/
+*.db
+
+# File bytecode Python
+__pycache__/
+*.pyc
