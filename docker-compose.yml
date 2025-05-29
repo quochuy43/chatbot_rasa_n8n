@@ -2,7 +2,6 @@ version: '3'
 services:
   rasa:
     image: rasa/rasa:3.6.0
-    user: "0:0"
     volumes:
       - ./:/app
     ports:
@@ -16,12 +15,11 @@ services:
   rasa-actions:
     build:
       context: .
-      dockerfile: action_server_docker/Dockerfile
+      dockerfile: ./action_server_docker/Dockerfile
     container_name: rasa-project-rasa-actions
     volumes:
       - ./actions:/app/actions
       - ./requirements-actions.txt:/app/requirements-actions.txt
-    user: "0:0"
     ports:
       - "5055:5055"
     networks:

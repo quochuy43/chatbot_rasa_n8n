@@ -12,8 +12,10 @@
 
 action_endpoint:
 # Endpoint để gọi action server (xử lý các custom action)
-# url: "http://rasa-actions:5055/webhook"
-  url: "http://localhost:5055/webhook"
+  url: "http://rasa-actions:5055/webhook"
+  plugins:
+    enabled: false
+# url: "http://localhost:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
