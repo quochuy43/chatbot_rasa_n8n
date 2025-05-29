@@ -272,6 +272,12 @@ nlu:
     - Bánh mì chả cá Đà Nẵng có thể ăn với gì?
     - Mì Quảng Đà Nẵng có thể ăn với gia vị nào?
 
+- lookup: food_name
+- lookup: coffee_name
+- lookup: streetfood_name
+
+
+# Coffee
 - intent: ask_all_coffee_tea_shops
   examples: |
     - Đà Nẵng có những quán cà phê/ trà sữa nào ngon?
@@ -283,6 +289,204 @@ nlu:
     - Liệt kê giúp mình các quán cà phê/ trà sữa đặc trưng của Đà Nẵng.
     - Đồ uống ở Đà Nẵng có nhiều quán hấp dẫn không bạn?
     - Còn nhiều quán cà phê nào khác không bạn?
-    - Bạn nói thêm cho mình nhiều quán khác đi.
-    - Còn quán nào nữa không?
-    - Kể thêm vài quán nữa đi.
+    - Bạn nói thêm cho mình nhiều quán cà phê khác đi.
+    - Còn quán cà phê nào nữa không?
+    - Kể thêm vài quán cà phê nữa đi.
+
+- intent: ask_coffee_shops_details
+  examples: |
+    - [Hệ thống Baskin - Robbins Miền Trung](coffee_name) ý bạn?
+    - Cho mình biết về [Hệ thống Highlands Coffee - Đà Nẵng](coffee_name) đi bạn.
+    - [Hệ thống BonPas Bakery & Coffee](coffee_name) nha.
+    - [Hệ thống EZI Coffee_foody](coffee_name) thì sao?
+    - [Hệ thống Trà Sữa Money](coffee_name) có ngon không ạ?
+    - [Gong Cha - Trà & Cà Phê - Nguyễn Văn Linh](coffee_name) ấy.
+    - [Trà Sữa Bobapop - Nguyễn Văn Linh](coffee_name) nha bạn.
+    - [Hệ thống Cloudy - Nitrogen Ice Cream & Drinks](coffee_name) có gì đặc biệt?
+    - Cho mình hỏi về [Hệ thống Vevy Milktea](coffee_name) ở Đà Nẵng chỗ nào ngon?
+    - Nghe nói [Allen Coffee](coffee_name) có view đẹp, bạn có thông tin gì không?
+    - Ở Đà Nẵng có [Wonderlust Cafe & Bakery](coffee_name) không nhỉ?
+    - Bạn biết [Cloud Garden Coffee](coffee_name) nào nổi tiếng không?
+    - [KoKo Green Kafe](coffee_name) mua bánh ở đâu thì chuẩn?
+    - Bạn biết gì về [Hanana Coffee & Tea Express](coffee_name) không?
+    - [Samdi - Không Gian Xưa](coffee_name) có ngon không bạn?
+    - Mình muốn biết về quán [Trà Sữa Ăn Vặt Toco Điện Biên Phủ](coffee_name).
+    - Bạn ơi, nói cho mình về [Boulevard Gelato & Coffee - Trần Quốc Toản](coffee_name) đi.
+    - Kể mình nghe về quán [Hệ thống Danang Souvenirs & Cafe](coffee_name).
+    - [Hệ thống The Coffee House - Đà Nẵng](coffee_name) có gì đặc biệt?
+    - Cho mình hỏi về [Hệ thống Phúc Long Coffee & Tea - Flag Others](coffee_name).
+    - [Hệ thống 161 Coffee & Milk Tea](coffee_name) ý.
+    - Bạn biết gì về [Kem Bơ Cô Vân - Chợ Bắc Mỹ An](coffee_name) không?
+    - [Trà Sữa R&B - Đống Đa](coffee_name) có ngon không?
+    - Mình muốn biết về quán [Underground Coffee To Go](coffee_name).
+
+- intent: ask_coffee_location
+  examples: |
+    - [Hệ thống Baskin - Robbins Miền Trung](coffee_name) ở đâu vậy?
+    - [Hệ thống Highlands Coffee - Đà Nẵng](coffee_name) nằm ở chỗ nào?
+    - Địa chỉ của [Hệ thống BonPas Bakery & Coffee](coffee_name) là gì?
+    - Tôi muốn tìm [Hệ thống EZI Coffee_foody](coffee_name).
+    - [Hệ thống Trà Sữa Money](coffee_name) có những cơ sở nào?
+    - [Gong Cha - Trà & Cà Phê - Nguyễn Văn Linh](coffee_name) ở vị trí nào?
+    - Chỉ đường đến [Trà Sữa Bobapop - Nguyễn Văn Linh](coffee_name).
+    - [Hệ thống Cloudy - Nitrogen Ice Cream & Drinks](coffee_name) nằm ở đâu?
+    - [Hệ thống Vevy Milktea](coffee_name) có chi nhánh nào gần đây không?
+    - [Allen Coffee](coffee_name) nằm ở khu vực nào?
+    - [Hệ thống Cộng Cà Phê - Miền Trung](coffee_name) có những địa điểm nào?
+    - [Wonderlust Cafe & Bakery](coffee_name) nằm ở đâu trên bản đồ?
+    - Cho mình xin địa chỉ của [Cloud Garden Coffee](coffee_name).
+    - [KoKo Green Kafe](coffee_name) có những chi nhánh nào?
+    - [Hanana Coffee & Tea Express](coffee_name) nằm ở đâu Đà Nẵng?
+    - [Samdi - Không Gian Xưa](coffee_name) nằm ở vị trí nào?
+    - [Trà Sữa Ăn Vặt Toco Điện Biên Phủ](coffee_name) ở đâu vậy bạn?
+    - [Boulevard Gelato & Coffee - Trần Quốc Toản](coffee_name) nằm ở chỗ nào?
+    - [Hệ thống Danang Souvenirs & Cafe](coffee_name) có những địa chỉ nào?
+    - [Hệ thống The Coffee House - Đà Nẵng](coffee_name) có những chi nhánh nào ở Đà Nẵng?
+    - [Hệ thống Milan Milktea](coffee_name) nằm ở đâu?
+    - [Hệ thống Phúc Long Coffee & Tea - Flag Others](coffee_name) ở đâu trên bản đồ?
+    - [Hệ thống 161 Coffee & Milk Tea](coffee_name) nằm ở vị trí nào?
+    - [Kem Bơ Cô Vân - Chợ Bắc Mỹ An](coffee_name) nằm ở đâu?
+    - [Trà Sữa R&B - Đống Đa](coffee_name) có địa chỉ cụ thể là gì?
+    - [Underground Coffee To Go](coffee_name) có những cơ sở nào?
+    - [Hệ thống Liferia Coffee](coffee_name) nằm ở đâu bạn nhỉ?
+    - [CoCo Food - Trà Sữa & Ăn Vặt](coffee_name) nằm ở chỗ nào?
+    - Cho mình xin vị trí của [Tasty U Too Coffee](coffee_name).
+    - [Lyn's Milk Tea & Drinks - Vincom Center Đà Nẵng](coffee_name) nằm ở đâu?
+    - [Mộc Miên Cafe](coffee_name) nằm ở vị trí nào trên bản đồ?
+    - [Ava Chocolate & Tea Room](coffee_name) nằm ở đâu vậy?
+    - [Hệ thống Trà Sữa Ocha House](coffee_name) có những chi nhánh nào?
+    - [The 1.9.9.3 - Sữa Tươi Trân Châu Đường Đen](coffee_name) nằm ở đâu Đà Nẵng?
+    - [Hệ thống Starbucks Coffee - Đà Nẵng](coffee_name) có những địa điểm nào?
+    - [Tổ Cafe](coffee_name) nằm ở đâu?
+    - [Caffè Fresco](coffee_name) nằm ở vị trí nào?
+    - [Cafe Memory By Hùng](coffee_name) nằm ở đâu trên bản đồ?
+    - [Time Coffee - Trần Hưng Đạo](coffee_name) nằm ở đâu?
+    - [Nia Cafe](coffee_name) có địa chỉ cụ thể là gì?
+    - [Hệ thống Bông Food & Drink](coffee_name) nằm ở đâu?
+    - [Green & Brown Coffee](coffee_name) nằm ở chỗ nào?
+    - [Palmier Café & Restaurant](coffee_name) nằm ở vị trí nào?
+    - [Kali Bingsu - Ice Creams & Korea Foods](coffee_name) nằm ở đâu?
+    - [Trà Sữa Royaltea - Phạm Văn Đồng](coffee_name) có những chi nhánh nào?
+    - [Sunrise Coffee](coffee_name) nằm ở đâu trên bản đồ?
+    - [Bunny Coffee & Milktea](coffee_name) nằm ở đâu?
+    - [Lủng Milktea & Coffee - Phan Đăng Lưu](coffee_name) nằm ở vị trí nào?
+
+- intent: ask_coffee_rating_above
+  examples: |
+    - Quán cà phê nào có điểm đánh giá trên [5](rating)?
+    - Những quán cà phê có điểm lớn hơn [8](rating)?
+    - Kể tên quán cà phê có điểm > [7](rating)
+    - Quán cà phê nào có rating từ [6](rating) trở lên?
+    - Mình muốn tìm các quán cà phê có điểm đánh giá cao hơn [7.5](rating).
+    - Có quán trà sữa nào đạt điểm trên [8.0](rating) không?
+    - Danh sách các quán cà phê có điểm đánh giá từ [9](rating) trở lên?
+    - Chỉ cho mình những quán cà phê có rating lớn hơn [7](rating).
+    - Mình muốn biết các quán cà phê có điểm cao hơn [7.2](rating).
+    - Quán cà phê nào được đánh giá trên [8.5](rating) vậy?
+    - Hãy kể tên các quán cà phê có điểm > [7](rating).
+    - Quán cà phê nào có điểm đánh giá trung bình từ [6.5](rating) trở lên?
+    - Cho mình biết các quán cà phê có điểm lớn hơn hoặc bằng [7](rating).
+    - Tìm quán cà phê có điểm trên [8](rating).
+    - Liệt kê các quán cà phê có điểm đánh giá từ [7](rating).
+
+
+# Streetfood
+- intent: ask_all_street_food_places
+  examples: |
+    - Đà Nẵng có những quán ăn vặt nào ngon?
+    - Có quán ăn vặt nào ngon không?
+    - Bạn giới thiệu cho mình các quán ăn vặt ở Đà Nẵng đi.
+    - Mình muốn tìm chỗ ăn vặt ở Đà Nẵng.
+    - Quán ăn vặt nào nổi tiếng ở Đà Nẵng vậy bạn?
+    - Đi Đà Nẵng nên ăn vặt ở đâu nhỉ?
+    - Liệt kê giúp mình các quán ăn vặt/ẩm thực đường phố đặc trưng của Đà Nẵng.
+    - Đồ ăn vặt ở Đà Nẵng có nhiều quán hấp dẫn không bạn?
+    - Còn nhiều quán ăn vặt nào khác không bạn?
+    - Bạn nói thêm cho mình nhiều quán ăn vặt khác đi.
+    - Còn quán ăn vặt nào nữa không?
+    - Kể thêm vài quán ăn vặt nữa đi.
+    - Các món street food ngon ở Đà Nẵng là gì?
+    - Cho mình danh sách các quán ăn đường phố Đà Nẵng.
+    - Ăn vặt ở Đà Nẵng thì nên đi đâu?
+    - Tìm giúp mình những quán ăn vặt được nhiều người yêu thích.
+
+- intent: ask_street_food_details
+  examples: |
+    - [Zé Food - Gà Rán Và Lẩu Ly](streetfood_name) ý bạn?
+    - Cho mình biết về [VEVY MILKTEA - Chợ Hàn](streetfood_name) đi bạn.
+    - [Bubble Tea - Đồ Ăn Hàn Quốc - 88 Trần Bình Trọng](streetfood_name) nha.
+    - [Tàu Hủ Xe Lam - Trần Phú](streetfood_name) thì sao?
+    - [Bớp Bư Bự - Ẩm Thực Hàn Quốc - Phan Châu Trinh](streetfood_name) có ngon không ạ?
+    - [Quán Ăn Vặt Bếp Nhà La - Chân Gà Sả Ớt - Nguyễn Gia Thiều](streetfood_name) ấy.
+    - [Bánh Tráng Kẹp Dì Hoa](streetfood_name) nha bạn.
+    - [Ăn Vặt - Trường Kim Đồng - Trần Bình Trọng](streetfood_name) có gì đặc biệt?
+    - Cho mình hỏi về [Bon Bon Milk Tea](streetfood_name) có gì ngon?
+    - Nghe nói [Hệ thống Bánh Ép Huế & Ăn Vặt Khánh](streetfood_name) nổi tiếng, bạn có thông tin gì không?
+    - Ở Đà Nẵng có [Trà Sữa Nhà Làm Hoa Ly - Trần Cao Vân](streetfood_name) không nhỉ?
+    - Bạn biết [Ăn Vặt Hương Cốm Quán](streetfood_name) nào nổi tiếng không?
+    - [Ăn Vặt Cô Liên](streetfood_name) bán món gì?
+    - Bạn biết gì về [Ăn Vặt Ba Cô](streetfood_name) không?
+    - [Hệ thống Chè Xuân Trang](streetfood_name) có ngon không bạn?
+    - Mình muốn biết về quán [Hệ thống Ăn Vặt 3Colu](streetfood_name).
+    - Bạn ơi, nói cho mình về [Bánh Tráng Kẹp Dì Liên - Trần Tống, P. Thạc Gián](streetfood_name) đi.
+    - Kể mình nghe về quán [Hệ thống Chè Liên Đà Nẵng - Chè sầu Liên](streetfood_name).
+    - [Ăn Vặt & Trà Sữa Cô Thủy](streetfood_name) có gì đặc biệt?
+    - Cho mình hỏi về [Tacos Danang - Ẩm Thực Đường Phố Mexico](streetfood_name).
+
+- intent: ask_street_food_location
+  examples: |
+    - [Zé Food - Gà Rán Và Lẩu Ly](streetfood_name) ở đâu vậy?
+    - [VEVY MILKTEA - Chợ Hàn](streetfood_name) nằm ở chỗ nào?
+    - Địa chỉ của [Bubble Tea - Đồ Ăn Hàn Quốc - 88 Trần Bình Trọng](streetfood_name) là gì?
+    - Tôi muốn tìm [Tàu Hủ Xe Lam - Trần Phú](streetfood_name).
+    - [Bớp Bư Bự - Ẩm Thực Hàn Quốc - Phan Châu Trinh](streetfood_name) có những cơ sở nào?
+    - [Quán Ăn Vặt Bếp Nhà La - Chân Gà Sả Ớt - Nguyễn Gia Thiều](streetfood_name) ở vị trí nào?
+    - Chỉ đường đến [Bánh Tráng Kẹp Dì Hoa](streetfood_name).
+    - [Ăn Vặt - Trường Kim Đồng - Trần Bình Trọng](streetfood_name) nằm ở đâu?
+    - [Bon Bon Milk Tea](streetfood_name) có chi nhánh nào gần đây không?
+    - [Hệ thống Bánh Ép Huế & Ăn Vặt Khánh](streetfood_name) nằm ở khu vực nào?
+    - [Trà Sữa Nhà Làm Hoa Ly - Trần Cao Vân](streetfood_name) có những địa điểm nào?
+    - [Ăn Vặt Hương Cốm Quán](streetfood_name) nằm ở đâu trên bản đồ?
+    - Cho mình xin địa chỉ của [Ăn Vặt Cô Liên](streetfood_name).
+    - [Ăn Vặt Ba Cô](streetfood_name) có những chi nhánh nào?
+    - [Hệ thống Chè Xuân Trang](streetfood_name) nằm ở đâu Đà Nẵng?
+    - [Hệ thống Ăn Vặt 3Colu](streetfood_name) nằm ở vị trí nào?
+    - [Bánh Tráng Kẹp Dì Liên - Trần Tống, P. Thạc Gián](streetfood_name) ở đâu vậy bạn?
+    - [Hệ thống Chè Liên Đà Nẵng - Chè sầu Liên](streetfood_name) nằm ở chỗ nào?
+    - [Ăn Vặt & Trà Sữa Cô Thủy](streetfood_name) có những địa chỉ nào?
+    - [Tacos Danang - Ẩm Thực Đường Phố Mexico](streetfood_name) có những chi nhánh nào ở Đà Nẵng?
+    - [Bánh Rán Doraemon](streetfood_name) nằm ở đâu?
+    - [Gusto - Trà sữa, Cà Phê & Matcha - 679 Trần Cao Vân](streetfood_name) ở đâu trên bản đồ?
+    - [Khu Ẩm Thực Chợ Cồn](streetfood_name) nằm ở vị trí nào?
+    - [Trà Sữa Tic Tac Tea](streetfood_name) nằm ở đâu?
+    - [Phúc Drink - Trần Cao Vân](streetfood_name) có địa chỉ cụ thể là gì?
+    - [Bánh Tráng Kẹp Dì Hoàng](streetfood_name) có những cơ sở nào?
+    - [Bà Nội Quán - Thức Ăn Nhanh - Lê Thánh Tôn](streetfood_name) nằm ở đâu bạn nhỉ?
+    - [Quán Thịnh - Xôi & Cháo](streetfood_name) nằm ở chỗ nào?
+    - Cho mình xin vị trí của [Bánh Tráng Dì Bi](streetfood_name).
+    - [Khu Ẩm Thực Chợ Bắc Mỹ An](streetfood_name) nằm ở đâu?
+    - [Hệ thống Phố Cổ Hà Nội - DN](streetfood_name) nằm ở vị trí nào trên bản đồ?
+    - [Hiền Eo - Cháo Quẩy Sườn Sụn](streetfood_name) nằm ở đâu vậy?
+    - [Sinh Tố - TROPI Fruit & Ice Cream](streetfood_name) có những chi nhánh nào?
+    - [Bánh Tráng Trộn Dì Hằng](streetfood_name) nằm ở đâu Đà Nẵng?
+    - [Xôi Bà Bé](streetfood_name) có những địa điểm nào?
+    - [Cháo Quẩy Sườn Sụn Bé Bi - Phan Thanh](streetfood_name) nằm ở đâu?
+
+- intent: ask_street_food_rating_above
+  examples: |
+    - Quán ăn vặt nào có điểm đánh giá trên [5](street_rating)?
+    - Những quán ăn vặt có điểm lớn hơn [8](street_rating)?
+    - Kể tên quán ăn vặt có điểm > [7](street_rating)
+    - Quán ăn vặt nào có street_rating từ [6](street_rating) trở lên?
+    - Mình muốn tìm các quán ăn vặt có điểm đánh giá cao hơn [7.5](street_rating).
+    - Có quán ăn vặt nào đạt điểm trên [8.0](street_rating) không?
+    - Danh sách các quán ăn vặt có điểm đánh giá từ [9](street_rating) trở lên?
+    - Chỉ cho mình những quán ăn vặt có rating lớn hơn [7](street_rating).
+    - Mình muốn biết các quán ăn vặt có điểm cao hơn [7.2](street_rating).
+    - Quán ăn vặt nào được đánh giá trên [8.5](street_rating) vậy?
+    - Hãy kể tên các quán ăn vặt có điểm > [7](street_rating).
+    - Quán ăn vặt nào có điểm đánh giá trung bình từ [6.5](street_rating) trở lên?
+    - Cho mình biết các quán ăn vặt có điểm lớn hơn hoặc bằng [7](street_rating).
+    - Tìm quán ăn vặt có điểm trên [8](street_rating).
+    - Liệt kê các quán ăn vặt có điểm đánh giá từ [7](street_rating).
+    - Những chỗ ăn vặt nào có điểm trên [6.2](street_rating)?

@@ -70,3 +70,81 @@ stories:
   - intent: ask_all_coffee_tea_shops
   - action: action_list_many_coffees
 
+- story: Hỏi thông tin chi tiết về quán cà phê
+  steps:
+  - intent: ask_coffee_shops_details
+  - action: action_provide_coffee_info
+
+- story: Hỏi nhiều quán cà phê nổi tiếng xong hỏi chi tiết
+  steps:
+  - intent: ask_all_coffee_tea_shops
+  - action: action_list_many_coffees
+  - intent: ask_coffee_shops_details
+  - action: action_provide_coffee_info
+
+- story: Hỏi thông tin địa chỉ về quán cà phê
+  steps:
+  - intent: ask_coffee_location
+  - action: action_provide_coffee_location
+
+- story: Hỏi nhiều quán cà phê nổi tiếng xong hỏi địa chỉ
+  steps:
+  - intent: ask_all_coffee_tea_shops
+  - action: action_list_many_coffees
+  - intent: ask_coffee_location
+  - action: action_provide_coffee_location
+
+- story: Hỏi thông các quán cà phê có đánh giá trên ... điểm
+  steps:
+  - intent: ask_coffee_rating_above
+  - action: action_filter_coffee_by_rating
+
+- story: Hỏi nhiều quán cà phê nổi tiếng xong hỏi số quán trên ... điểm
+  steps:
+  - intent: ask_all_coffee_tea_shops
+  - action: action_list_many_coffees
+  - intent: ask_coffee_rating_above
+  - action: action_filter_coffee_by_rating
+
+
+# Ăn vặt
+- story: Hỏi nhiều quán ăn vặt nổi tiếng
+  steps:
+  - intent: ask_all_street_food_places
+  - action: action_list_many_streetfoods
+
+- story: Hỏi thông tin chi tiết về quán ăn vặt
+  steps:
+  - intent: ask_street_food_details
+  - action: action_provide_streetfood_info
+
+- story: Hỏi nhiều quán ăn vặt nổi tiếng xong hỏi chi tiết
+  steps:
+  - intent: ask_all_street_food_places
+  - action: action_list_many_streetfoods
+  - intent: ask_street_food_details
+  - action: action_provide_streetfood_info
+
+- story: Hỏi thông tin địa chỉ về quán ăn vặt
+  steps:
+  - intent: ask_street_food_location
+  - action: action_provide_streetfood_location
+
+- story: Hỏi nhiều quán ăn vặt nổi tiếng xong hỏi địa chỉ
+  steps:
+  - intent: ask_all_street_food_places
+  - action: action_list_many_streetfoods
+  - intent: ask_street_food_location
+  - action: action_provide_streetfood_location
+
+- story: Hỏi thông các quán ăn vặt có đánh giá trên ... điểm
+  steps:
+  - intent: ask_street_food_rating_above
+  - action: action_filter_streetfood_by_rating
+
+- story: Hỏi nhiều quán cà phê nổi tiếng xong hỏi số quán trên ... điểm
+  steps:
+  - intent: ask_all_street_food_places
+  - action: action_list_many_streetfoods
+  - intent: ask_street_food_rating_above
+  - action: action_filter_streetfood_by_rating

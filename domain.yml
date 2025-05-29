@@ -10,10 +10,19 @@ intents:
   - ask_food_location
   - faq_food_question
   - ask_all_coffee_tea_shops
-
+  - ask_coffee_shops_details
+  - ask_coffee_location
+  - ask_coffee_rating_above
+  - ask_all_street_food_places
+  - ask_street_food_details
+  - ask_street_food_location
+  - ask_street_food_rating_above
 entities:
   - food_name
   - coffee_name
+  - rating
+  - streetfood_name
+  - street_rating
 
 # Phiên bản rasa >= 3x thì mỗi slot phải có mapping để biết đang nhận giá trị từ entity nào
 slots:
@@ -38,6 +47,19 @@ slots:
         entity: coffee_name
 
   shown_coffees_indices:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  streetfood_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: streetfood_name
+
+  shown_streetfoods_indices:
     type: list
     influence_conversation: false
     mappings:
@@ -79,6 +101,13 @@ actions:
   - action_provide_food_location
   - action_answer_food_faq
   - action_list_many_coffees
+  - action_provide_coffee_info
+  - action_provide_coffee_location
+  - action_filter_coffee_by_rating
+  - action_list_many_streetfoods
+  - action_provide_streetfood_info
+  - action_provide_streetfood_location
+  - action_filter_streetfood_by_rating
 
 session_config:
   session_expiration_time: 60
