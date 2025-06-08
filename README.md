@@ -1,4 +1,4 @@
-# 🍔 AI Chatbot Giao Đồ Ăn - Rasa Project
+# 🍔 AI Chatbot Đặt đồ ăn online - Rasa Project
 
 Dự án chatbot AI được xây dựng bằng framework Rasa, hỗ trợ người dùng đặt câu hỏi và nhận câu trả lời tự động về các vấn đề thường gặp trong ứng dụng giao đồ ăn như GrabFood, ShopeeFood (ví dụ: món ăn, địa chỉ món ăn,...).
 
@@ -90,3 +90,9 @@ rasa run --enable-api
     }
 ]
 ```
+
+---
+## Vậy là đã xong 1 endpoint. 
+### Ta có thể tích hợp vào web, app cá nhân hoặc build 1 workflow automation, sử dụng endpoint rasa làm HTTP Request Node như mình vậy nè: 
+![Screenshot 2025-05-11 110444](https://github.com/user-attachments/assets/e2622893-a4ed-4ee1-bdcb-8585568c75e6)
+
