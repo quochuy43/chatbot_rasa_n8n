@@ -1,10 +1,10 @@
-# 🍔 AI Chatbot Đặt đồ ăn online - Rasa Project
+# 🍔 Chatbot tư vấn ẩm thực khi du lịch Đà Nẵng
 
-Dự án chatbot AI được xây dựng bằng framework Rasa, hỗ trợ người dùng đặt câu hỏi và nhận câu trả lời tự động về các vấn đề thường gặp trong ứng dụng giao đồ ăn như GrabFood, ShopeeFood (ví dụ: món ăn, địa chỉ món ăn,...).
+Dự án chatbot AI được xây dựng bằng framework Rasa, hỗ trợ người dùng đặt câu hỏi và nhận câu trả lời tự động về ẩm thực Đà Nẵng (ví dụ: món ăn, địa chỉ món ăn,...).
 
 ## Dưới đây là toàn bộ hướng dẫn để set up project trên localhost
 ## Cấu trúc project (localhost)
-Đây là cấu trúc thư mục cơ bản của Rasa project trên localhost, các file khác của mình trong github chỉ là mình add vào để phục vụ việc deploy lên VPS thôi. Mọi người có thể xóa các file đó và giữ nguyên tree như bên dưới cũng được 😊 
+Đây là cấu trúc thư mục cơ bản của Rasa project trên localhost, các file khác của mình trong github chỉ là mình add vào để phục vụ việc deploy lên VPS thôi. Mọi người có thể xóa các file đó và giữ nguyên structure như bên dưới cũng được 😊 
 
 ```bash
 chatbot_rasa_n8n/
